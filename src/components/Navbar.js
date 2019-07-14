@@ -1,28 +1,42 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import FaHome from 'react-icons/lib/fa/home'
+import IoPersonStalker from 'react-icons/lib/io/person-stalker'
+import IoLogIn from 'react-icons/lib/io/log-in'
+import FaImage from 'react-icons/lib/fa/image'
+import Button from 'react-bootstrap/Button'
+import '../App.css'
+// import IoLogIn from 'react-icons/lib/io/log-in'
+// import IoLogIn from 'react-icons/lib/io/log-in'
 
-import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const MyNavbar = () => {
     return (
-       
-            <nav>
-                <div className="nav-wrapper">
-                    <a href="#!" className="brand-logo">स्वदेशी समाज सेवा समिति</a>
-                    <ul className="right hide-on-med-and-down">
+
+        <Navbar bg="dark" expand="lg" variant="dark">
+            <Navbar.Brand href="/home">स्वदेशी समाज सेवा समिति</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <div className="ml-auto">
+                <Navbar.Collapse id="responsive-navbar-nav">
+                    <Nav className="mr-auto">
                     
-                        <li><Link to="/"><i className="material-icons">home</i></Link></li>
-                        <li><Link to = "/gallery"><i className="material-icons">photo_library</i></Link></li>
-                        <li><Link to="/volunteer"><i className="material-icons">people</i></Link></li>
-                        <li><Link to ="/news"><i className="material-icons">sms</i></Link></li>
-                        <li><Link to="/contact"><i className="material-icons">contact_phone</i></Link></li>
-                        <li><Link to="/login"><i className="material-icons">account_circle</i></Link></li>
+                    <Nav.Link href="/home"><FaHome size={30}/></Nav.Link>
+                        <Nav.Link href="/keyPeople"><IoPersonStalker size={30}/></Nav.Link>
+
+                        <Nav.Link href="/gallery"><FaImage size={30}/></Nav.Link>
+                        <Nav.Link href="/login"><IoLogIn size={30}/></Nav.Link>
+                        <Nav.Link href="/donate"><Button variant = "secondary" type="submit">Donate</Button></Nav.Link>
+                   
                         
-                        <Link to = "/createVolunteer"className="btn waves-effect waves-teal"><i className="material-icons left"></i>Donate</Link>
-                    </ul>
-                </div>
-            </nav>
-      
+
+                    </Nav>
+                </Navbar.Collapse>
+            </div>
+
+        </Navbar>
+
     )
 }
 
-export default Navbar;
+export default MyNavbar;

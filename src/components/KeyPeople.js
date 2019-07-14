@@ -1,40 +1,37 @@
 import React from 'react'
-import logo from '../images/1.jpg'
+import '../App.css';
+import logo from '../images/profile.jpg'
+import Card from 'react-bootstrap/Card'
+import CardColumns from 'react-bootstrap/CardColumns'
 const KeyPeople = () => {
     return (
-        <div>
-            <div class="row">
-                <div class="col s3 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src={logo} alt="images" width="100" height="300" />
-                            <span class="card-title">Vivek Yadav</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s3 m4">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src={logo} alt="images" width="100" height="300" />
-                            <span class="card-title">Vivek Yadav</span>
-                        </div>
-                        <div class="card-content">
-                            <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-                        </div>
-                        <div class="card-action">
-                            <a href="#">This is a link</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="container">
+            <CardColumns>
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={logo} className="cardImage" />
+                    <Card.Body >
+                        <Card.Title>सविवेक यादव (सचिव)</Card.Title>
+                        <Card.Text>
+                        <p>पता: नगला जोरे</p>
+                        <p>मो. +918131823812</p>
+                         </Card.Text>
+                    </Card.Body>
+                </Card>
+
+
+                <Card style={{ width: '18rem' }}>
+                    <Card.Img variant="top" src={logo} className="cardImage" />
+                    <Card.Body >
+                        <Card.Title>सविवेक यादव (सचिव)</Card.Title>
+                        <Card.Text>
+                        <p>पता: नगला जोरे</p>
+                        <p>मो. +918131823812</p>
+                         </Card.Text>
+                    </Card.Body>
+                </Card>
+                
+             
+            </CardColumns>
         </div>
     )
 }

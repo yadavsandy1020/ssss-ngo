@@ -20,6 +20,8 @@ function App() {
         <header>
           <Navbar />
         </header>
+
+
         <Switch>
 
           <Route exact path='/' component={Home}></Route>
@@ -30,7 +32,15 @@ function App() {
           <Route path='/news' component={News}></Route>
           <Route path='/createVolunteer' component={Form}></Route>
           <Route path='/login' component={Login}></Route>
-          <Route path='/keyPeople' component={KeyPeople}></Route>
+      
+          
+            
+              <Route path='/keyPeople' component={KeyPeople}></Route>
+            
+
+
+
+
 
         </Switch>
         <Footer />

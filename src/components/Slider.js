@@ -23,11 +23,11 @@ const Slider = ()=> {
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                    <img src={image4} width ="300px" height="400px" />
+                    <img src={image4} width ="200px" height="400px" />
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 <div>
-                    <img src={image2} width ="400px" height="400px" />
+                    <img src={image2} width ="200px" height="400px" />
                     {/* <p className="legend">Legend 2</p> */}
                 </div>
                 {/* <div>

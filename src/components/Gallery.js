@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { render } from 'react-dom';
+
 import Gallery from 'react-grid-gallery';
 
 const IMAGES =
@@ -30,8 +30,12 @@ class MyGallery  extends Component{
 
     render(){
         return(
-            
-                <Gallery images={IMAGES}/>
+                <div>
+                
+                <Gallery images={IMAGES} className= "pagination"/>
+                
+                </div>
+                
                 
         )
     }

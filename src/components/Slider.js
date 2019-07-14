@@ -1,45 +1,42 @@
-import React from 'react'
-
-const Slider = ()=>{
-
+import React from 'react';
+import image1 from '../images/1.jpg'
+import image2 from '../images/2.jpg'
+import image3 from '../images/3.jpg'
+import image4 from '../images/4.jpg'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+ 
+const Slider = ()=> {
     
-
-    return(
-        <div>
-        <div class="slider">
-    <ul class="slides">
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/1"/> 
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/2"/> 
-        <div class="caption left-align">
-          <h3>Left Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/3"/> 
-        <div class="caption right-align">
-          <h3>Right Aligned Caption</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-      <li>
-        <img src="https://lorempixel.com/580/250/nature/4"/> 
-        <div class="caption center-align">
-          <h3>This is our big Tagline!</h3>
-          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
-        </div>
-      </li>
-    </ul>
-  </div>
-        </div>
-    )
+        return (
+            <Carousel showThumbs= {false}>
+                <div>
+                    <img src={image1} width ="200px" height="400px"/>
+                    {/* <p className="legend">Legend 1</p> */}
+                </div>
+                <div>
+                    <img src={image2} width ="200px" height="400px" />
+                    {/* <p className="legend">Legend 2</p> */}
+                </div>
+                <div>
+                    <img src={image3} width ="200px" height="400px" />
+                    {/* <p className="legend">Legend 2</p> */}
+                </div>
+                <div>
+                    <img src={image4} width ="300px" height="400px" />
+                    {/* <p className="legend">Legend 2</p> */}
+                </div>
+                <div>
+                    <img src={image2} width ="400px" height="400px" />
+                    {/* <p className="legend">Legend 2</p> */}
+                </div>
+                {/* <div>
+                    <img src="assets/3.jpeg" />
+                    <p className="legend">Legend 3</p>
+                </div> */}
+            </Carousel>
+        );
+    
 }
 
-export default Slider;
+export default Slider
